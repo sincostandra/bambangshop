@@ -69,7 +69,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement notify function in Notification service to notify each Subscriber.`
     -   [X] Commit: `Implement publish function in Program service and Program controller.`
     -   [X] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -111,3 +111,18 @@ Postman sangat membantu saya ketika mau nguji endpoint REST API. Fitur postman s
 
 
 #### Reflection Publisher-3
+
+1. Observer Pattern has two variations: Push model (publisher pushes data to subscribers) and Pull model (subscribers pull data from publisher). In this tutorial case, which variation of Observer Pattern that we use?  
+
+Answer:  
+Pada tutorial ini saya menggunakan model 'Push',  artinya jika ada perubahan pada publisher (Product) maka Subscriber akan mendapatkan notifikasi melalui Notification.   
+
+2. What are the advantages and disadvantages of using the other variation of Observer Pattern for this tutorial case? (example: if you answer Q1 with Push, then imagine if we used Pull)  
+
+Answer:  
+Keuntungan pull adalah lebih efisien dan hemat secara cost karena oerubahan hanya akan diterima ketika diminta, bukan setiap saat ada perubahan. Tentunya dari keuntungan itu, kekurangannya adalah  bisa saja terjadi keterlmabatan update karena info/data hanya diterima saat subscriber meminta infonya  
+
+3. Explain what will happen to the program if we decide to not use multi-threading in the notification process  
+
+Answer:  
+Jika tidak menggunakan multi-threading, pengiriman notifiaksi akan menumpuk karena dilakukan secra berurutan, hal ini membuat latency yang meningkat dan menurunkan performa sistem, apalagi jika proses notifikasinya terjadi penundaan atau error.
