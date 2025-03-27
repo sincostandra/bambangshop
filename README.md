@@ -63,7 +63,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement subscribe function in Notification controller.`
     -   [X] Commit: `Implement unsubscribe function in Notification service.`
     -   [X] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [X] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -92,6 +92,22 @@ Kalau kita menggunakan Vec, tentunya kompleksitas waktu yang diperlukan untuk me
 Answer:  
 Keduanya tetap disarankan untuk diimplementasi, hal ini karena singleton lebih fokus untuk memastikan hanya ada satu instance global, sedangkan DashMap memastikan bahwa data yang ada tetap aman meskipun dipakai oleh thread yang berbeda.  
 
-#### Reflection Publisher-2
+#### Reflection Publisher-2  
+
+1. In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?  
+
+Answer:  
+Menurut saya, jika hanya menggunakan satu file (yakni Model), maka seluruh logic aplikasi akan tertumpuk pada satu tempat. Hal ini akan menyusahkan kita jika nanti ada perubahan. Oleh karena itu diperlukan pemisahan antara Service dan Repository dari model.  
+
+2. What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?  
+
+Answer:  
+Seperti yang sudah saya sebutkan sebelumnya, Jika hanya menggunakan satu file, isi file tersebut tidak akan readable, sehingga jika kita mau melakuakn perubahan akan sangat memakan waktu untuk melakukannya  
+
+3. Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.  
+
+Answer:  
+Postman sangat membantu saya ketika mau nguji endpoint REST API. Fitur postman seperti collections untuk mengelompokkan request, environment variable untuk mengganti port dsb.  
+
 
 #### Reflection Publisher-3
